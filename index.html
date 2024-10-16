@@ -45,18 +45,20 @@
 <body>
     <div class="container">
         <h1>Device Options</h1>
-        <button class="button" onclick="addDevice()">Add Device</button>
         <a href="path/to/user-manual.pdf" target="_blank" class="button">User Manual</a>
         <button class="button" onclick="openConfiguration()">Configuration</button>
     </div>
 
     <script>
-        function addDevice() {
-            alert('Add Device functionality will be implemented here.');
-        }
-
         function openConfiguration() {
-            alert('Configuration settings will be opened here.');
+            // Replace with your ESP32's access point (AP) credentials
+            const ssid = "ESP32_SSID";
+            const password = "ESP32_PASSWORD";
+
+            alert(`Please connect your device to the Wi-Fi network:\n\nSSID: ${ssid}\nPassword: ${password}`);
+
+            // Attempt to redirect to the captive portal (ESP32's IP address, usually 192.168.4.1)
+            window.location.href = "http://192.168.5.1";
         }
     </script>
 </body>
