@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Device Setup Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .button {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Device Options</h1>
+        <button class="button" onclick="addDevice()">Add Device</button>
+        <a href="path/to/user-manual.pdf" target="_blank" class="button">User Manual</a>
+        <button class="button" onclick="openConfiguration()">Configuration</button>
+    </div>
+
+    <script>
+        function addDevice() {
+            alert('Add Device functionality will be implemented here.');
+        }
+
+        function openConfiguration() {
+            alert('Configuration settings will be opened here.');
+        }
+    </script>
+</body>
+
+</html>
