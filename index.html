@@ -44,7 +44,6 @@
         
         .button {
             display: inline-block;
-            width: 90%;
             margin: 10px 0;
             padding: 15px;
             font-size: 18px;
@@ -57,21 +56,35 @@
             transition: all 0.3s ease;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        /* Button Hover Effect */
+        /* Hover Effect for Buttons */
         
         .button:hover {
-            background: #0056b3;
             transform: translateY(-3px);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
-        /* User Manual Button Specific Style */
+        /* Specific Button Sizes */
         
         .button.manual {
             background: #28a745;
+            width: 70%;
         }
         
         .button.manual:hover {
             background: #218838;
+        }
+        
+        .button.configuration {
+            width: 90%;
+        }
+        /* Download Configuration App Button Style */
+        
+        .button.download {
+            background: #17a2b8;
+            width: 90%;
+        }
+        
+        .button.download:hover {
+            background: #138496;
         }
     </style>
 </head>
@@ -79,10 +92,12 @@
 <body>
     <div class="container">
         <h1>Device Setup</h1>
-        <!-- User Manual Button -->
+        <!-- User Manual Button (Smaller) -->
         <a href="https://drive.google.com/file/d/1fROPEPCnAycnnwjho3N-RDgTuhBx0d-E/view?usp=sharing" target="_blank" class="button manual">User Manual</a>
-        <!-- Configuration Button -->
-        <button class="button" onclick="openConfiguration()">Configuration</button>
+        <!-- Configuration Button (Medium) -->
+        <button class="button configuration" onclick="openConfiguration()">Configuration Web-Page</button>
+        <!-- Download Configuration Application Button with OneDrive link -->
+        <a href="https://1drv.ms/u/c/f8ad922d9f5be25f/EXNa0n6XJOZNhhQrGRCKdrMBTpIykeXRtIsMgCJn7pvDIQ?e=EKcVnJ" target="_blank" class="button download">Download Configuration Application</a>
     </div>
 
     <script>
@@ -92,8 +107,6 @@
             const password = "PASSWORD";
 
             alert(`Please connect your device to the Wi-Fi network:\n\nSSID: ${ssid}\nPassword: ${password}`);
-
-            // Attempt to redirect to the captive portal (ESP32's IP address, usually 192.168.4.1)
             window.location.href = "http://192.168.5.1";
         }
     </script>
